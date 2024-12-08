@@ -1,0 +1,16 @@
+
+stap for use redux 
+# install @reduxjs/toolkit & react-redux
+# make a folder for redux stor
+# MAKE a file inside that folder for store 
+# import configure store in side store
+# MAKE a slice file
+# import creatSlice in side slice file
+# give the name to slice
+# creat a initialState in to slice 
+# then make reducers inside slice
+# export defult slice.reducer 
+# export actions form slice
+# provid our stor to app LIKE - <provider store={store}></provider>
+# useDispatvh to use your reducer
+# use sulecter to
