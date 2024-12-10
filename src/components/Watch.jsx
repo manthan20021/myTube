@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { closeManu } from '../utils/appSlice'
 import { useSearchParams } from 'react-router-dom'
@@ -17,7 +17,7 @@ function Watch() {
    return(
   <div className='w-full'>
 
-     <div className='w-[100%] flex justify-between h-auto p-5'>
+     <div className='w-[100%] flex justify-between h-auto p-6'>
       <iframe 
       className='rounded-xl'
       width="914" 
