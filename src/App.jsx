@@ -1,11 +1,11 @@
 import { Provider } from "react-redux"
 import Head from "./components/Head"
-import AppStore from "./utils/appStore"
 import { TbH6 } from "react-icons/tb"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import SubBody from "./components/SubBody"
 import MainBody from "./components/MainBody"
 import Watch from "./components/Watch"
+import AppStore from "./stores/appStore"
 
 
   const approuter = createBrowserRouter([{

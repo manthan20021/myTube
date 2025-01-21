@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom'
 function VideoCantenar() {
 
   const [videoData, setVideoData] = useState([])
+  
+  
+  
 
 
   useEffect(() => {
@@ -17,10 +20,7 @@ function VideoCantenar() {
     const videoData = await fetch(YOUTUBE_VIDEO_API)
     const videoJson = await videoData.json()
     setVideoData(videoJson.items)
-   
-    
-    
-
+    console.log(videoJson);
   }
 
   return (

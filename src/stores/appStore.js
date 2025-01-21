@@ -1,5 +1,4 @@
-import LiveChat from '../components/LiveChat';
-import isManuOpen from './appSlice';
+import isManuOpen from './isManuOpenSlice';
 import liveChatSlice from './liveChatSlice'
 import { configureStore } from "@reduxjs/toolkit";
 

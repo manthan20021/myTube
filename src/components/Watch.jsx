@@ -1,13 +1,14 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { closeManu } from '../utils/appSlice'
+import { closeManu } from '../stores/isManuOpenSlice'
 import { useSearchParams } from 'react-router-dom'
 import LiveChat from './LiveChat'
 
 
 function Watch() {
 
-  const [SearchParams] = useSearchParams()
+  
+  const [SearchParams] = useSearchParams() 
   
    const dispatch = useDispatch()
   useEffect(() => {
@@ -17,7 +18,10 @@ function Watch() {
    return(
   <div className='w-full'>
 
+  
+
      <div className='w-[100%] flex justify-between h-auto p-6'>
+      <div>
       <iframe 
       className='rounded-xl'
       width="914" 
@@ -36,7 +40,10 @@ function Watch() {
       web-share" 
       referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
       </iframe>
-      <LiveChat/>
+      
+      
+      </div>
+     <LiveChat/>
     </div>
   </div>
   )

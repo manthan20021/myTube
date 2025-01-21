@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import LiveComent from './LiveComent'
 import { useDispatch, useSelector } from 'react-redux'
-import { addmasshge } from '../utils/liveChatSlice'
+import { addmasshge } from '../stores/liveChatSlice'
 import { getComentData, getRandomName } from '../utils/HelperData'
 
 function LiveChat() {

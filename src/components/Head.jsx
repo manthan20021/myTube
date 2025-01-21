@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FiAlignJustify } from "react-icons/fi";
 import { IoLogoYoutube } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
 import { useDispatch } from 'react-redux';
-import { togelManu } from '../utils/appSlice';
+import { togelManu } from '../stores/isManuOpenSlice'
 import { YOUTUBE_SEARCH_API } from '../utils/const' 
 
 
@@ -25,16 +25,18 @@ function Head() {
     return () => {
       clearTimeout(timer)
     }
-  },[searchQuery])
+  },[searchQuery]) 
 
   const getSearchData = async () => {
-    const searchData = await fetch(
-      YOUTUBE_SEARCH_API + searchQuery
-    )
-    const json = await searchData.json()
-    setSearchResults(json[1]) 
-
+    const searchData = await fetch( YOUTUBE_SEARCH_API + searchQuery)
+    const json = await searchData.text()
+    setSearchResults(json) 
+    console.log(json);
+    
   }
+
+  console.log(searchQuery);
+
 
   const handelTogelClick = () => {
     dispatch(togelManu())
@@ -110,6 +112,7 @@ function Head() {
             mr-2 text-gray-500 
             font-thin
             '/>{results}</li>
+            
           )) 
           }</ul>}
           </div>
