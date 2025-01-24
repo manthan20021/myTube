@@ -2,7 +2,7 @@
 function VideoCard({info}) {
   
   return (
-    <div className='w-[399px] h-[342px] ml-6'>
+    <div className='sm:w-[299px] sm:h-[242px] w-full h-auto ml-6'>
         <img 
         className='
         w-full 

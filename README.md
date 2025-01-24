@@ -12,3 +12,9 @@ Currently, two official plugins are available:
  >do not call api on backpress
  >do not call api on same btn agen and agen 
  
+
+1. watch page
+#add caption below watch video
+#chainal name, subscribe btn, like dislike, share
+#discription
+#comments

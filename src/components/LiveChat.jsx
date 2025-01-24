@@ -19,7 +19,6 @@ function LiveChat() {
             dispatch(addmasshge({
                 name: getRandomName(),
                 maseege: getComentData()
-               
             }))
 
         },[1000])
@@ -33,6 +32,7 @@ function LiveChat() {
     w-[35%] 
     border-gray-300 
     border-2 rounded-lg
+    h-auto
     '>
     <div className='
     bg-gray-100 

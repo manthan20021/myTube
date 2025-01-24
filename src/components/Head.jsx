@@ -30,12 +30,9 @@ function Head() {
   const getSearchData = async () => {
     const searchData = await fetch( YOUTUBE_SEARCH_API + searchQuery)
     const json = await searchData.text()
-    setSearchResults(json) 
-    console.log(json);
+    setSearchResults(json)
     
   }
-
-  console.log(searchQuery);
 
 
   const handelTogelClick = () => {

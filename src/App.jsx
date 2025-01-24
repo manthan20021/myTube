@@ -1,6 +1,5 @@
 import { Provider } from "react-redux"
 import Head from "./components/Head"
-import { TbH6 } from "react-icons/tb"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import SubBody from "./components/SubBody"
 import MainBody from "./components/MainBody"
@@ -24,7 +23,6 @@ import AppStore from "./stores/appStore"
   }])
 
 function App() {  
-
 
   return (
    <div>

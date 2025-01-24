@@ -1,30 +1,19 @@
-import { useEffect, useState } from 'react'
-import { YOUTUBE_VIDEO_API } from '../utils/const'
+import { useSelector } from 'react-redux'
 import VideoCard from './VideoCard'
 import { Link } from 'react-router-dom'
+import useVideos from "../hooks/useVideos";
+
 
 
 function VideoCantenar() {
-
-  const [videoData, setVideoData] = useState([])
+useVideos()
   
+  const videoData = useSelector((store) => store.video.videos)
+  console.log(videoData);
+
   
-  
-
-
-  useEffect(() => {
-    getVideoList()
-  },[])
-
-  const getVideoList = async () => {
-    const videoData = await fetch(YOUTUBE_VIDEO_API)
-    const videoJson = await videoData.json()
-    setVideoData(videoJson.items)
-    console.log(videoJson);
-  }
-
   return (
-    <div className='flex flex-wrap pt-6 w-[1300px]'>
+    <div className='sm:flex sm:flex-wrap grid grid-flow-row grid-cols-1 pt-6 sm:w-[1300px]'>
       {
         videoData.map(vido => {
           return (
